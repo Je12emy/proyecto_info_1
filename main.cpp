@@ -163,16 +163,16 @@ int main() {
       cout << "Ingrese un numero de máximo 4 dígitos: ";
       cin >> numero;
 
-      int tamaño = numero.length();
-      // Con la funcion length es posible obtner el tamaño de una cadena de text
-      if (tamaño <= 4) {
+      int largo = numero.length();
+      // Con la funcion length es posible obtner el largo de una cadena de text
+      if (largo <= 4) {
         // Variables acumuladores
         int suma = 0;
         // Variable temporal para guardar el valor de un item dentro de la
         // cadena de texto
         string temp;
         // Iterar por cada item en la cadena de texto
-        for (int i = 0; i < tamaño; i++){  
+        for (int i = 0; i < largo; i++){  
           // Guardar el valor actual
           temp = numero[i];
           suma = suma + stoi(temp);
@@ -180,7 +180,7 @@ int main() {
         // Mostrar resultados
         cout << endl;
         cout << "~ Suma de los dígitos: " << suma << endl;
-        cout << "~ Cantidad de dígitos: " << tamaño << endl;
+        cout << "~ Cantidad de dígitos: " << largo << endl;
         cout << endl;
 
       } else {

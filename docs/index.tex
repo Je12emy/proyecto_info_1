@@ -50,14 +50,17 @@
 \author{Integrantes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\renewcommand*\contentsname{Indice de Contenido}
+
 \begin{document}
     \maketitle
-    
+    \tableofcontents
+
 \section{Programa de Inicio}
 
 El programa de inicio utiliza un ciclo \emph{do} junto a una variable booleana \emph{run}, de esta manera se obtiene a un programa que continuara ejecutando a no ser que el valor de \emph{run} sea falso. 
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
         \centering
     \includegraphics[width=8cm]{loop_inicio}
@@ -68,7 +71,7 @@ El programa de inicio utiliza un ciclo \emph{do} junto a una variable booleana \
 
 Acá se le presenta al usuario una lista de programas disponibles y se captura la opción ingresada, este valor se evalúa con una estructura de control \emph{switch} para ejecutar cada ejercicio.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=8cm]{switch_programa}
     \caption{Diagrama de Flujo del Menú Principal}
@@ -78,7 +81,7 @@ Acá se le presenta al usuario una lista de programas disponibles y se captura l
 
 El primer programa empieza capturando las 3 variables: \emph{a}, \emph{b} y \emph{c}, de tipo \emph{double} para no perder precisión al momento de calcular el área del triángulo. Estas variables son entonces evaluadas en un condicional para verificar si una de ellas es negativa o igual a 0, de ser verdad entonces se muestra el error ``¡Solo se aceptan valores positivos!'', de ser falso se continúa con otro condicional para evaluar si los valores ingresados crean un triángulo: \emph{(a + b) > c}, de ser falso se muestra el error: ``¡Los valores ingresados no crean un triángulo!''. Con estos valores ya evaluados se utiliza la \emph{fórmula de Herrón} para obtener el área del triángulo.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=8cm]{triangulo_area}
     \caption{Diagrama de Flujo del Calculador de Área de un Triángulo}
@@ -86,7 +89,7 @@ El primer programa empieza capturando las 3 variables: \emph{a}, \emph{b} y \emp
 
 Con el cálculo del área completo, se evalúa el tipo de triángulo con las medidas ingresadas.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=8cm]{triangulo_tipo}
     \caption{Diagrama de Flujo del Calculador del Tipo de Triángulo}
@@ -114,7 +117,7 @@ Con este resultado, se evalúa con un condicional si el estudiante ha pasado el 
 
 El contador de dígitos solícito el ingreso de un número, este número es enrealidad capturado en una variable de tipo \emph{String} para obtener su largo con la propiedad \emph{lenght}. Esta propiedad es usada para validar la cantidad de dígitos 
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=8cm]{contador_digitos_validacion}
     \caption{Diagrama de la Validación del Programa Contador de Dígitos}
@@ -150,7 +153,7 @@ Cabe a destacar que este contador es restaurado cada vez que el usuario ingresa 
 
 El programa de salida corresponde a un simple condicional que solicita confirmación del usuario para terminar la ejecución, si se confirma la salida del programa entonces se cambia el valor de la variable \emph{run} a falso y se cierra el ciclo principal del programa.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=8cm]{programa_salida}
     \caption{Diagrama de Flujo del Programa de Salida}

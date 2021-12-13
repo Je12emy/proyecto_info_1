@@ -130,9 +130,9 @@ Adicionalmente se usa esta propiedad para crear un ciclo \emph{for} con el cual 
 
 \section{Limitador de Intentos}
 
-En el capítulo dedicado a cada programa se ha estado omitiendo el limitador de intentos máximos en caso de que el usuario ingrese una opción inválida al momento de seleccionar un programa por ejecutar, esto es logrado mediante una variable \emph{intentos}, la cual es reducida cada vez que el usuario ingresa un valor no esperado en el menú principal.
+En el capítulo dedicado a cada programa se ha estado omitiendo el limitador de intentos máximos en caso de que el usuario ingrese una opción inválida al momento de seleccionar un programa por ejecutar, esto es logrado mediante una variable \emph{intentos}, la cual es reducida cada vez que el usuario ingresa un valor no esperado en el menú principal para que cuando este llegue a 3, se cierre el ciclo principal del programa poniendo el valor de la variable booleana \emph{run} en falso.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=8cm]{limitador_intentos_salida}
     \caption{Diagrama de Flujo del Programa de Salida}
@@ -144,6 +144,16 @@ Cabe a destacar que este contador es restaurado cada vez que el usuario ingresa 
     \centering
     \includegraphics[width=8cm]{limitador_intentos_reinicio}
     \caption{Diagrama de Flujo del Limitador de Intentos}
+\end{figure}
+
+\section{Programa de Salida}
+
+El programa de salida corresponde a un simple condicional que solicita confirmación del usuario para terminar la ejecución, si se confirma la salida del programa entonces se cambia el valor de la variable \emph{run} a falso y se cierra el ciclo principal del programa.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{programa_salida}
+    \caption{Diagrama de Flujo del Programa de Salida}
 \end{figure}
 
 \end{document}

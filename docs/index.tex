@@ -110,4 +110,22 @@ Con este resultado, se evalúa con un condicional si el estudiante ha pasado el 
     \caption{Diagrama de Flujo del Resultado Final del Promedio Ponderado}
 \end{figure}
 
+\section{Tercer Programa}
+
+El contador de dígitos solícito el ingreso de un número, este número es enrealidad capturado en una variable de tipo \emph{String} para obtener su largo con la propiedad \emph{lenght}. Esta propiedad es usada para validar la cantidad de dígitos 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{contador_digitos_validacion}
+    \caption{Diagrama de la Validación del Programa Contador de Dígitos}
+\end{figure}
+
+Adicionalmente se usa esta propiedad para crear un ciclo \emph{for} con el cual se itera sobre cada carácter para poder sumarlo a una variable acumuladora llamada \emph{suma}, cabe a destacar el uso de la función \emph{stoi}, la cual permite convertir valores de tipo \emph{String} a valores de tipo numerales \emph{int} así como el uso de una variable ``temporal'' para guardar el valor actual del carácter por sumar.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{contador_digitos_ciclo}
+    \caption{Diagrama de Flujo del Ciclo \emph{for} del Programa Contador de Dígitos}
+\end{figure}
+
 \end{document}

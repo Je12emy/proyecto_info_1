@@ -128,4 +128,22 @@ Adicionalmente se usa esta propiedad para crear un ciclo \emph{for} con el cual 
     \caption{Diagrama de Flujo del Ciclo \emph{for} del Programa Contador de Dígitos}
 \end{figure}
 
+\section{Limitador de Intentos}
+
+En el capítulo dedicado a cada programa se ha estado omitiendo el limitador de intentos máximos en caso de que el usuario ingrese una opción inválida al momento de seleccionar un programa por ejecutar, esto es logrado mediante una variable \emph{intentos}, la cual es reducida cada vez que el usuario ingresa un valor no esperado en el menú principal.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{limitador_intentos_salida}
+    \caption{Diagrama de Flujo del Programa de Salida}
+\end{figure}
+
+Cabe a destacar que este contador es restaurado cada vez que el usuario ingresa correctamente una opción presentada en el menú principal.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{limitador_intentos_reinicio}
+    \caption{Diagrama de Flujo del Limitador de Intentos}
+\end{figure}
+
 \end{document}

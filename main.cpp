@@ -33,7 +33,7 @@ int main() {
     // Ejecutar programa con un switch
     switch (opcion) {
     case 'A': {
-      // Reiniciar la cantidad 
+      // Reiniciar la cantidad de intentos
       intentos = intentos_maximos;
 
       cout << "Calculador de area de un triangulo" << endl;

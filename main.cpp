@@ -6,8 +6,9 @@ using namespace std;
 
 int main() {
   bool run = true;
+  const int intentos_maximos = 3;
   // Contador de intentos restantes
-  int intentos = 3;
+  int intentos = intentos_maximos;
 
   do {
     // Imprimir información básica
@@ -32,8 +33,8 @@ int main() {
     // Ejecutar programa con un switch
     switch (opcion) {
     case 'A': {
-      // Reiniciar la cantidad de intentos posibles
-      intentos = 3;
+      // Reiniciar la cantidad 
+      intentos = intentos_maximos;
 
       cout << "Calculador de area de un triangulo" << endl;
       // Capturar el largo de cada lado
@@ -86,126 +87,133 @@ int main() {
     case 'B': {
 
       // Reiniciar la cantidad de intentos posibles
-      intentos = 3;
+      intentos = intentos_maximos;
 
       cout << "Calculador de primedio final." << endl;
 
       // Programa Calculador de promedio
-      string nombre;
+      string estudiante;
       cout << "Ingrese un nombre: ";
-      cin >> nombre;
+      cin >> estudiante;
 
-      float nota1, nota2, nota3, nota4, nota5, nota6;
-      float porcentaje1, porcentaje2, porcentaje3, porcentaje4, porcentaje5,
-          porcentaje6;
-      float resultado;
+      float n1, n2, n3, n4, n5, n6, p1, p2, p3, p4, p5, p6, nota;
 
       // Obtener valores
-      cout << "- Ingrese un valor para el primer instrumento: ";
-      cin >> nota1;
-      cout << "+ Ingrese un porcentaje para el primer instrumento: ";
-      cin >> porcentaje1;
+      cout << "1. Ingrese un la primera nota de " + estudiante + ":";
+      cin >> n1;
+      cout << " 1.1 Ingrese un porcentaje para la primera nota de " + estudiante + ":";
+      cin >> p1;
 
-      cout << "- Ingrese un valor para el segundo instrumento: ";
-      cin >> nota2;
-      cout << "+ Ingrese un porcentaje para el segundo instrumento: ";
-      cin >> porcentaje2;
+      cout << "2. Ingrese un valor para la segunda nota de " + estudiante + ":";
+      cin >> n2;
+      cout << " 2.1 Ingrese un porcentaje para la segunda nota de " + estudiante + ":";
+      cin >> p2;
 
-      cout << "- Ingrese un valor para el tercer instrumento: ";
-      cin >> nota3;
-      cout << "+ Ingrese un porcentaje para el tercer instrumento: ";
-      cin >> porcentaje3;
+      cout << "3. Ingrese un valor la tercera nota de " + estudiante + ":";
+      cin >> n3;
+      cout << " 3.1 Ingrese un porcentaje la tercera nota de " + estudiante + ":";
+      cin >> p3;
 
-      cout << "- Ingrese un valor para el cuarto instrumento: ";
-      cin >> nota4;
-      cout << "+ Ingrese un porcentaje para el cuarto instrumento: ";
-      cin >> porcentaje4;
+      cout << "4 Ingrese un valor la cuarta nota de " + estudiante + ":";
+      cin >> n4;
+      cout << " 4.1 Ingrese un porcentaje la cuarta nota de " + estudiante + ":";
+      cin >> p4;
 
-      cout << "- Ingrese un valor para el quinto instrumento: ";
-      cin >> nota4;
-      cout << "+ Ingrese un porcentaje para el quinto instrumento: ";
-      cin >> porcentaje4;
+      cout << "5. Ingrese un valor la quinta nota de " + estudiante + ":";
+      cin >> n5;
+      cout << " 5.1 Ingrese un porcentaje la quinta nota " + estudiante + ":";
+      cin >> p5;
 
-      cout << "- Ingrese un valor para el sexto instrumento: ";
-      cin >> nota6;
-      cout << "+ Ingrese un porcentaje para el sexto instrumento: ";
-      cin >> porcentaje6;
+      cout << "6. Ingrese un valor para la sexta nota " + estudiante + ":";
+      cin >> n6;
+      cout << "6.1 Ingrese un porcentaje la sexta nota " + estudiante + ":";
+      cin >> p6;
 
-      cout << "Calculando resultados....";
+      cout << "Validando datos..." << endl;
 
-      // Calcular promedio ponderado
-      // Fuente: https://es.wikihow.com/calcular-el-promedio-ponderado
-      resultado = (nota1 * porcentaje1 / 100) + (nota2 * porcentaje2 / 100) +
-                  (nota3 * porcentaje3 / 100) + (nota4 * porcentaje4 / 100) +
-                  (nota5 * porcentaje5 / 100) + (nota6 * porcentaje6 / 100);
-
-      cout << endl;
-      cout << "Resultados: " << endl;
-      cout << "~ La calificación de " << nombre << " es " << resultado << endl;
-
-      // Evaluar resultado
-      if (resultado >= 70) {
-        cout << nombre << " ha aprobado el curso!" << endl;
+      if ((p1 + p2 + p3 + p4 + p5 + p5 > 100) && (p1 + p2 + p3 + p4 + p5 + p6 < 100 )) {
+        cout << "Los porcentajes ingresados no deben de exceder ni ser menor a un 100% ...";
       } else {
-        cout << nombre << " ha reprobado el curso" << endl;
+
+        cout << "Calculando resultados....";
+
+        // Fuente: https://es.wikihow.com/calcular-el-promedio-ponderado
+        nota = (n1 * p1 / 100) + (n2 * p2 / 100) + (n3 * p3 / 100) +
+               (n4 * p4 / 100) + (n5 * p5 / 100) + (n6 * p6 / 100);
+
+        cout << endl;
+        cout << "+ La calificación de " << estudiante << " es " << nota << endl;
+
+        // Evaluar resultado
+        if (nota >= 70) {
+          cout << estudiante << " ha aprobado el curso de programación!" << endl;
+        } else {
+          cout << estudiante << " ha reprobado el curso de programación" << endl;
+        }
       }
       break;
     }
     case 'C': {
-      // Reiniciar la cantidad de intentos posibles
-      intentos = 3;
+      // Reiniciar la cantidad de intentos 
+      intentos = intentos_maximos;
 
       // Programa Contador de Dígitos
       cout << "Contador de dígitos." << endl;
       string numero;
 
-      // Capturar la entrada
-      cout << "Ingrese un numero de máximo 4 dígitos: ";
+      // Capturar un número
+      cout << "Ingrese un numero de máximo 4 dígitos:";
       cin >> numero;
 
-      int largo = numero.length();
       // Con la funcion length es posible obtner el largo de una cadena de text
+      int largo = numero.length();
       if (largo <= 4) {
-        // Variables acumuladores
-        int suma = 0;
-        // Variable temporal para guardar el valor de un item dentro de la
-        // cadena de texto
-        string temp;
-        // Iterar por cada item en la cadena de texto
-        for (int i = 0; i < largo; i++){  
-          // Guardar el valor actual
-          temp = numero[i];
-          suma = suma + stoi(temp);
+        // Variables acumuladoras
+        int suma_final = 0;
+        // Guarda el número actual en el ciclo
+        string numero_actual;
+        // Recorer por cada número
+        // '123' -> recorre 3 veces
+        for (int i = 0; i < largo; i++) {
+          // Guardar el número actual en el ciclo
+          // '1[2]3' -> numero_actual = 2
+          numero_actual = numero[i];
+          // Convertir de texto a numero
+          // '2' -> 2
+          // Puede causar un error si se ingresa una letra!
+          // 'o' -> error
+          suma_final = suma_final + stoi(numero_actual);
         }
-        // Mostrar resultados
+        // Resultados finales
         cout << endl;
-        cout << "~ Suma de los dígitos: " << suma << endl;
-        cout << "~ Cantidad de dígitos: " << largo << endl;
+        cout << "- Suma de los números ingresados:" << suma_final<< endl;
+        cout << "- Cantidad de números ingresados:" << largo << endl;
         cout << endl;
 
       } else {
-        cout << "Ese numero no es valido..." << endl;
+        cout << "¡El numero ingreado no es valido!" << endl;
       }
       break;
     }
 
     case 'D': {
-      intentos = 3;
+      intentos = intentos_maximos;
       char salir;
-      cout << "¿Desea salir del programa?[s/n]: ";
+      cout << "¿Desea terminar el programa? [s/n]: ";
       cin >> salir;
 
       switch (salir) {
       case 's': {
-        cout << "Cerrando programa...." << endl;
+        cout << "Terminando programa..." << endl;
         run = false;
         break;
       }
       case 'n': {
+        // No hacer nada
         break;
       }
       default: {
-        cout << "Esa no es una opción!" << endl;
+        cout << "¡Esa no es una opción valida!" << endl;
       }
       }
       break;
@@ -214,10 +222,9 @@ int main() {
     default: {
       // Reducir la cantidad de intentos
       intentos = intentos - 1;
-      cout << "Esa no es una opción valida... Intentos restantes " << intentos 
-           << endl;
+      cout << "Esa no es una opción valida... Tiene " << intentos <<  " intentos restantes..." << endl; 
       if (intentos == 0) {
-        cout << "Ha llegado al limite de intentos, cerrando programa.." << endl;
+        cout << "Se ha llegado al limite de intentos máximos, cerrando programa.." << endl;
         run = false;
       }
       break;

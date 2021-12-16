@@ -99,40 +99,40 @@ int main() {
       float n1, n2, n3, n4, n5, n6, p1, p2, p3, p4, p5, p6, nota;
 
       // Obtener valores
-      cout << "1. Ingrese un la primera nota de " + estudiante + ":";
+      cout << "1. Ingrese un la primera nota de " + estudiante + ": ";
       cin >> n1;
-      cout << " 1.1 Ingrese un porcentaje para la primera nota de " + estudiante + ":";
+      cout << " 1.1 Ingrese un porcentaje para la primera nota de " + estudiante + ": ";
       cin >> p1;
 
-      cout << "2. Ingrese un valor para la segunda nota de " + estudiante + ":";
+      cout << "2. Ingrese un valor para la segunda nota de " + estudiante + ": ";
       cin >> n2;
-      cout << " 2.1 Ingrese un porcentaje para la segunda nota de " + estudiante + ":";
+      cout << " 2.1 Ingrese un porcentaje para la segunda nota de " + estudiante + ": ";
       cin >> p2;
 
-      cout << "3. Ingrese un valor la tercera nota de " + estudiante + ":";
+      cout << "3. Ingrese un valor la tercera nota de " + estudiante + ": ";
       cin >> n3;
-      cout << " 3.1 Ingrese un porcentaje la tercera nota de " + estudiante + ":";
+      cout << " 3.1 Ingrese un porcentaje la tercera nota de " + estudiante + ": ";
       cin >> p3;
 
-      cout << "4 Ingrese un valor la cuarta nota de " + estudiante + ":";
+      cout << "4 Ingrese un valor la cuarta nota de " + estudiante + ": ";
       cin >> n4;
-      cout << " 4.1 Ingrese un porcentaje la cuarta nota de " + estudiante + ":";
+      cout << " 4.1 Ingrese un porcentaje la cuarta nota de " + estudiante + ": ";
       cin >> p4;
 
-      cout << "5. Ingrese un valor la quinta nota de " + estudiante + ":";
+      cout << "5. Ingrese un valor la quinta nota de " + estudiante + ": ";
       cin >> n5;
-      cout << " 5.1 Ingrese un porcentaje la quinta nota " + estudiante + ":";
+      cout << " 5.1 Ingrese un porcentaje la quinta nota " + estudiante + ": ";
       cin >> p5;
 
-      cout << "6. Ingrese un valor para la sexta nota " + estudiante + ":";
+      cout << "6. Ingrese un valor para la sexta nota " + estudiante + ": ";
       cin >> n6;
-      cout << "6.1 Ingrese un porcentaje la sexta nota " + estudiante + ":";
+      cout << "6.1 Ingrese un porcentaje la sexta nota " + estudiante + ": ";
       cin >> p6;
 
       cout << "Validando datos..." << endl;
 
-      if ((p1 + p2 + p3 + p4 + p5 + p5 > 100) && (p1 + p2 + p3 + p4 + p5 + p6 < 100 )) {
-        cout << "Los porcentajes ingresados no deben de exceder ni ser menor a un 100% ...";
+      if ((p1 + p2 + p3 + p4 + p5 + p5) > 100 || (p1 + p2 + p3 + p4 + p5 + p6) < 100 ) {
+        cout << "Los porcentajes ingresados no deben de exceder ni ser menor a un 100% ..." << endl;
       } else {
 
         cout << "Calculando resultados....";
@@ -222,7 +222,7 @@ int main() {
     default: {
       // Reducir la cantidad de intentos
       intentos = intentos - 1;
-      cout << "Esa no es una opción valida... Tiene " << intentos <<  " intentos restantes..." << endl; 
+      cout << "Esa no es una opción valida... Tiene " << intentos <<  "intentos restantes..." << endl; 
       if (intentos == 0) {
         cout << "Se ha llegado al limite de intentos máximos, cerrando programa.." << endl;
         run = false;

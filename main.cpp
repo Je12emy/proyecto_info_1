@@ -14,6 +14,8 @@ int main() {
     // Imprimir información básica
     cout << "Informática I - INDU-120" << endl;
     cout << "Proyecto Final" << endl;
+    cout << " - Valeria Rodríguez - 118330002" << endl;
+    cout << " - Melany Gonzalez - 208410089" << endl;
 
     // Imprimir ejercicios
     cout << "Programas Disponibles:" << endl;
